@@ -1,0 +1,14 @@
+Objetivo:
+Determinar el orden en que se deben visitar las sucursales bancarias para cumplir con las entregas o retiro de dinero pactados
+(sin que la carga supere el importe definido ni sea negativa) de manera tal de minimizar el recorrido en el día.
+Se deberá pasar por las 10 sucursales y volver a la sede de origen.
+
+Hipotesis y supuestos:
+- Las sucursales bancarias cuentan con el dinero necesario en caso de que se deba retirar.
+- No hay un límite de horario para que el camión de causales pase por una sucursal.
+- Se asume como período para realizar todas las entregas un día.
+
+Resolución:
+24-04-22: Impresion inicial del problema:
+Por la descripción se puede decir que se trata de un problema de camino mínimo. Para resolverlo se podría probar por fuerza
+bruta, intentando generar todas las combinaciones posibles y quedarse con la que presente el camino más corto.
