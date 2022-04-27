@@ -9,6 +9,8 @@ Hipotesis y supuestos:
 - Se asume como período para realizar todas las entregas un día.
 
 Resolución:
-24-04-22: Impresion inicial del problema:
+23-04-22: Impresion inicial del problema:
 Por la descripción se puede decir que se trata de un problema de camino mínimo. Para resolverlo se podría probar por fuerza
 bruta, intentando generar todas las combinaciones posibles y quedarse con la que presente el camino más corto.
+
+23-04-22: Se comienza parseando la información recibida en el archivo problema_uno.txt provisto por la cátedra.
