@@ -28,6 +28,8 @@ hasta que no quedan ciudades.
 Esta forma requiere recorrer la lista reiteradas veces por lo que no tendrá una buena performance, pero al tener pocas sucursales
 resulta computable.
 
-28-04-22: Al subir la solución da como resultado "Carga inválida en el punto 82, por lo que se procede a corregirla".
+28-04-22: Al subir la solución da como resultado "Carga inválida en el punto 82" por lo que se procede a corregirla.
 El problema estaba en que faltaba tomar como valor inicial la demanda de la ciudad 1. Al subir la solución el puntaje obtenido
-es 77,204.65
+es 77,204.65. Resulta ineficiente ya que lo que falta es ordenar la lista de distancias desde una ciudad objetivo al resto
+en forma ascendente.
+Al subir el nuevo camino obtenido el resultado es 9,578.61.
