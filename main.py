@@ -41,8 +41,48 @@ def parse_coordinates(coordinates_lines):
 
 def generate_solution():
     parse_file()
+    init = ("1", branch_offices["1"])
+    branch_offices.pop("1")
+    result = ["1"]
+    total = data["capacity"]
+
+    offices = list(branch_offices.items())
+    end = False
+    candidate = init
+
+    while(not end):
+        candidate, offices = find_the_closest(candidate, offices, total)
+        total += candidate[1]
+        result.append(candidate[0])
+        if(len(offices) == 1):
+            candidate = offices[0]
+            total += candidate[1]
+            result.append(candidate[0])
+            end = True
+
+    save_result(result)
+    #offices = sorted(offices, key=lambda x: x[1], reverse=True)
+
+def save_result(list):
+    file = open("result.txt", "w")
+    for x in list:
+        file.write("{} ".format(x))
+    file.close()
+
+def find_the_closest(office, offices, total):
+    distances = []
+    for element in offices:
+        distances.append((element[0], element[1], distance_between(coordinates[office[0]], coordinates[element[0]])))
+
+    distances = sorted(distances, key=lambda x: x[2], reverse=True)
+    for element in distances:
+        if(element[2] != 0 and total+element[1] >= 0 and total+element[1] <= data["capacity"]):
+            offices.remove((element[0], element[1]))
+            return element, offices
+
 
 def distance_between(coordinate1, coordinate2):
-    return math.sqrt((coordinate1[0] - coordinate2[0])**2 + (coordinate1[1] - coordinate2[2])**2)
+    return math.sqrt((coordinate1[0] - coordinate2[0])**2 + (coordinate1[1] - coordinate2[1])**2)
+
 
 generate_solution()
