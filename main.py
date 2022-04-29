@@ -74,7 +74,7 @@ def find_the_closest(office, offices, total):
     for element in offices:
         distances.append((element[0], element[1], distance_between(coordinates[office[0]], coordinates[element[0]])))
 
-    distances = sorted(distances, key=lambda x: x[2], reverse=True)
+    distances = sorted(distances, key=lambda x: x[2])
     for element in distances:
         if(element[2] != 0 and total+element[1] >= 0 and total+element[1] <= data["capacity"]):
             offices.remove((element[0], element[1]))
