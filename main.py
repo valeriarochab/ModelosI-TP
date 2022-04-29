@@ -41,14 +41,17 @@ def parse_coordinates(coordinates_lines):
 
 def generate_solution():
     parse_file()
-    init = ("1", branch_offices["1"])
+    result = custom_algorithim()
+    save_result(result)
+
+def custom_algorithim():
+    candidate = ("1", branch_offices["1"])
     branch_offices.pop("1")
     result = ["1"]
-    total = init[1]
+    total = candidate[1]
 
     offices = list(branch_offices.items())
     end = False
-    candidate = init
 
     while(not end):
         candidate, offices = find_the_closest(candidate, offices, total)
@@ -59,9 +62,7 @@ def generate_solution():
             total += candidate[1]
             result.append(candidate[0])
             end = True
-
-    save_result(result)
-    #offices = sorted(offices, key=lambda x: x[1], reverse=True)
+    return result
 
 def save_result(list):
     file = open("result.txt", "w")
