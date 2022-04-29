@@ -28,3 +28,4 @@ hasta que no quedan ciudades.
 Esta forma requiere recorrer la lista reiteradas veces por lo que no tendrá una buena performance, pero al tener pocas sucursales
 resulta computable.
 
+28-04-22: Al subir la solución da como resultado "Carga inválida en el punto 82, por lo que se procede a corregirla"

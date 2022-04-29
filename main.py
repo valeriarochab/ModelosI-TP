@@ -44,7 +44,7 @@ def generate_solution():
     init = ("1", branch_offices["1"])
     branch_offices.pop("1")
     result = ["1"]
-    total = data["capacity"]
+    total = init[1]
 
     offices = list(branch_offices.items())
     end = False
