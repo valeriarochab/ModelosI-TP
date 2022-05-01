@@ -41,11 +41,13 @@ def parse_coordinates(coordinates_lines):
 
 def generate_solution():
     parse_file()
-    best_result, best_cost = process_offices("1")
+    best_result, best_cost, last_candidate = process_offices("1")
+    best_cost += distance_between(coordinates[last_candidate[0]], coordinates["1"])
 
     for i in range(2, data["dimension"] + 1):
         if branch_offices[str(i)] > 0:
-            result, cost = process_offices(str(i))
+            result, cost, last_candidate = process_offices(str(i))
+            cost += distance_between(coordinates[last_candidate[0]], coordinates[str(i)])
             if cost < best_cost:
                 best_result = result
                 best_cost = cost
@@ -54,9 +56,9 @@ def generate_solution():
     save_result(best_result)
 
 def process_offices(n):
-    result = custom_algorithim(n)
+    result, last_candidate = custom_algorithim(n)
     cost = sum(k for i, j, k in result)
-    return result, cost
+    return result, cost, last_candidate
 
 def custom_algorithim(n):
     init = (n, branch_offices[n], 0)
@@ -74,11 +76,12 @@ def custom_algorithim(n):
         total += candidate[1]
         result.append(candidate)
         if(len(offices) == 1):
+            last_candidate = candidate
             candidate = offices[0]
             total += candidate[1]
-            result.append((candidate[0], candidate[1], distance_between(coordinates[init[0]], coordinates[candidate[0]])))
+            result.append((candidate[0], candidate[1], distance_between(coordinates[last_candidate[0]], coordinates[candidate[0]])))
             end = True
-    return result
+    return result, candidate
 
 
 def save_result(list):

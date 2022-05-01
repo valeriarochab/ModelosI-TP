@@ -39,3 +39,4 @@ hasta encontrar el menor costo.
 Al cargar la solución da como resultado "Carga inválida en el punto 53", esto es porque al variae la sucursal origen no podemos
 partir de sucursales que tienen demanda negativa (ya que inicialmente no se cuenta con dinero para entregar).
 
+30-04-22: El resultado obtenido con la mejora anterior es 8,576.93.
