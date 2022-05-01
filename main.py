@@ -41,34 +41,51 @@ def parse_coordinates(coordinates_lines):
 
 def generate_solution():
     parse_file()
-    result = custom_algorithim()
-    save_result(result)
+    best_result, best_cost = process_offices("1")
 
-def custom_algorithim():
-    candidate = ("1", branch_offices["1"])
-    branch_offices.pop("1")
-    result = ["1"]
+    for i in range(2, data["dimension"] + 1):
+        result, cost = process_offices(str(i))
+        if cost < best_cost:
+            best_result = result
+            best_cost = cost
+
+    print("Total cost: ", best_cost)
+    save_result(best_result)
+
+def process_offices(n):
+    result = custom_algorithim(n)
+    cost = sum(k for i, j, k in result)
+    return result, cost
+
+def custom_algorithim(n):
+    init = (n, branch_offices[n], 0)
+    aux_branch_offices = branch_offices.copy()
+    aux_branch_offices.pop(n)
+    candidate = init
+    result = [candidate]
     total = candidate[1]
 
-    offices = list(branch_offices.items())
+    offices = list(aux_branch_offices.items())
     end = False
 
     while(not end):
         candidate, offices = find_the_closest(candidate, offices, total)
         total += candidate[1]
-        result.append(candidate[0])
+        result.append(candidate)
         if(len(offices) == 1):
             candidate = offices[0]
             total += candidate[1]
-            result.append(candidate[0])
+            result.append((candidate[0], candidate[1], distance_between(coordinates[init[0]], coordinates[candidate[0]])))
             end = True
     return result
+
 
 def save_result(list):
     file = open("result.txt", "w")
     for x in list:
-        file.write("{} ".format(x))
+        file.write("{} ".format(x[0]))
     file.close()
+
 
 def find_the_closest(office, offices, total):
     distances = []
