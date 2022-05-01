@@ -8,6 +8,7 @@ Hipotesis y supuestos:
 - No hay un límite de horario para que el camión de causales pase por una sucursal.
 - Se asume como período para realizar todas las entregas un día.
 - No surgen inconvenientes al ir de una sucursal a otra, se puede ir a cualquiera que se elija.
+- Llegar a la sucursal inicial no tiene costo.
 
 Resolución:
 23-04-22: Impresion inicial del problema:
