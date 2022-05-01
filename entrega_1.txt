@@ -45,3 +45,5 @@ partir de sucursales que tienen demanda negativa (ya que inicialmente no se cuen
 
 01-05-22: Se agrega un fix para que se sume al resultado final el costo de volver desde la última sucursal a la primera.
 El costo es 8,428.02, siendo el mínimo costo obtenido en las pruebas realizadas.
+Se prueba otra versión del algoritmo tomando de a dos sucursales cercanas y eligiendo la más cercana entre ellas para
+moverse. Pero dicho algoritmo da el mismo resultado 8,428.02
