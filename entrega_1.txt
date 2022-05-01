@@ -7,6 +7,7 @@ Hipotesis y supuestos:
 - Las sucursales bancarias cuentan con el dinero necesario en caso de que se deba retirar.
 - No hay un límite de horario para que el camión de causales pase por una sucursal.
 - Se asume como período para realizar todas las entregas un día.
+- No surgen inconvenientes al ir de una sucursal a otra, se puede ir a cualquiera que se elija.
 
 Resolución:
 23-04-22: Impresion inicial del problema:
@@ -40,3 +41,6 @@ Al cargar la solución da como resultado "Carga inválida en el punto 53", esto 
 partir de sucursales que tienen demanda negativa (ya que inicialmente no se cuenta con dinero para entregar).
 
 30-04-22: El resultado obtenido con la mejora anterior es 8,576.93.
+
+01-05-22: Se agrega un fix para que se sume al resultado final el costo de volver desde la última sucursal a la primera.
+El costo es 8,428.02, siendo el mínimo costo obtenido en las pruebas realizadas.
