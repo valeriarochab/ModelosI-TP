@@ -44,10 +44,11 @@ def generate_solution():
     best_result, best_cost = process_offices("1")
 
     for i in range(2, data["dimension"] + 1):
-        result, cost = process_offices(str(i))
-        if cost < best_cost:
-            best_result = result
-            best_cost = cost
+        if branch_offices[str(i)] > 0:
+            result, cost = process_offices(str(i))
+            if cost < best_cost:
+                best_result = result
+                best_cost = cost
 
     print("Total cost: ", best_cost)
     save_result(best_result)

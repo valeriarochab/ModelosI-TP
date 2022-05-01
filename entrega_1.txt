@@ -36,3 +36,6 @@ Al subir el nuevo camino obtenido el resultado es 9,578.61.
 
 29-04-22: Como inicialmente se tomó la sucursal 1 como origen del recorrido, se procede a variar dicha sucursal origen. Se repite
 hasta encontrar el menor costo.
+Al cargar la solución da como resultado "Carga inválida en el punto 53", esto es porque al variae la sucursal origen no podemos
+partir de sucursales que tienen demanda negativa (ya que inicialmente no se cuenta con dinero para entregar).
+
