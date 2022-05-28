@@ -3,10 +3,14 @@ Resolución:
 siete horas de ejecución no se logran terminar de procesar, dada la cantidad de iteraciones que se realizan.
 
 24/05/22 El algoritmo que se utilizará para resolver el problema consiste en:
-Se toma la primer sucursal como punto de partida y se calcula la distancia a todas las sucursales, siempre y cuando la sucursal
-candidata cumpla con las condiciones de dinero. De esta lista se toma la sucursal de menor distancia al origen y a partir
-de ella se repite el proceso. A medida que se avanza a otra sucursal, se elimina la sucursal visitada de la lista de
-sucursales, de esta forma al calcular las distancias a un punto siempre va a ser sobre una lista de menor longitud que la
-inicial.
+Se toma la primer sucursal como punto de partida y se calcula la distancia desde ella a todas las sucursales, siempre y
+cuando la sucursal candidata cumpla con las condiciones de dinero necesarias. De esta lista generada se toma la sucursal
+de menor distancia a la sucursal actual y a partir de ella se repite el proceso. A medida que se avanza a otra sucursal,
+se elimina la sucursal visitada de la lista de sucursales. De esta forma al calcular las distancias a un punto siempre
+se va a hacer sobre una lista de menor longitud que la inicial. Haciendo que el tiempo de procesamiento sea manejable.
 
-28/05/22 Se aplica el algoritmo y el resultado obtenido es Total cost:  939754.385137688
+28/05/22 Se aplica el algoritmo y el resultado obtenido es Total cost:  939754.39
+
+Otro algoritmo que se intenta probar es calcular las distancias desde cada sucursal a todas las demás, para luego ordenar
+por buckets por distancia cercana. Pero dada la cantidad de elementos a computar, el cálculo de todas las distancia se
+vuelve inmanejable por lo que se descarta el algoritmo.

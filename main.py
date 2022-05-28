@@ -6,6 +6,7 @@ data = {}
 branch_offices = {}
 coordinates = {}
 
+
 def parse_file():
     branch_offices_lines = []
     coordinates_lines = []
@@ -171,38 +172,48 @@ def find_next(first, second, offices, total):
             offices.remove((element[0], element[1]))
             return element, offices
 
+
 ####### Entrega 2 ########
 def main2():
     parse_file()
-    calculate_distances()
+    result = calculate_distances()
+    save_result(result)
+
 
 def calculate_distances():
+    aux_branch_offices = branch_offices.copy()
+    offices2 = list(aux_branch_offices.items())
+    offices2 = sorted(offices2, key=lambda x: x[1])
+    offices2 = list(filter(lambda x: x[1] > 0, offices2))[:10]
+
     best_cost = math.inf
     best_result = []
-    offices_visited = []
-    aux_branch_offices = branch_offices.copy()
-    offices = list(aux_branch_offices.items())
-    initial_office = offices[0]
-    money = initial_office[1]
-    total_cost = money
-    offices.remove(initial_office)
-    offices_visited.append(initial_office[0])
-    next_office, money, total_cost = select_next_office(initial_office, money, total_cost, offices, offices_visited)
+    for i in range(0, len(offices2)):
+        offices_visited = []
+        aux_branch_offices = branch_offices.copy()
+        offices = list(aux_branch_offices.items())
+        initial_office = offices2[i]
+        money = initial_office[1]
+        total_cost = money
+        offices.remove(initial_office)
+        offices_visited.append(initial_office[0])
+        next_office, money, total_cost = select_next_office(initial_office, money, total_cost, offices, offices_visited)
 
-    while offices:
-        next_office, money, total_cost = select_next_office(next_office, money, total_cost, offices, offices_visited)
-        print(len(offices))
+        while offices:
+            next_office, money, total_cost = select_next_office(next_office, money, total_cost, offices, offices_visited)
+            print(len(offices))
+            if total_cost > best_cost:
+                break
 
-    total_cost += distance_between(coordinates[initial_office[0]], coordinates[next_office[0]])
+        total_cost += distance_between(coordinates[initial_office[0]], coordinates[next_office[0]])
 
-    if total_cost < best_cost:
-        best_result = offices_visited.copy()
-        best_cost = total_cost
+        if total_cost < best_cost:
+            best_result = offices_visited.copy()
+            best_cost = total_cost
 
     print("Total cost: ", best_cost)
     print("best result", len(best_result))
-    #print("best result", best_result)
-    save_result(best_result)
+    return best_result
 
 
 def select_next_office(initial_office, money, total_cost, offices, offices_visited):
