@@ -94,9 +94,9 @@ def custom_algorithm(n):
 
 
 def save_result(list):
-    file = open("result2.txt", "w")
+    file = open("result3.txt", "w")
     for x in list:
-        file.write("{} ".format(x[0]))
+        file.write("{} ".format(x))
     file.close()
 
 
@@ -201,6 +201,7 @@ def calculate_distances():
 
     print("Total cost: ", best_cost)
     print("best result", len(best_result))
+    #print("best result", best_result)
     save_result(best_result)
 
 
