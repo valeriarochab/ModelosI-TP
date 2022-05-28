@@ -6,7 +6,6 @@ data = {}
 branch_offices = {}
 coordinates = {}
 
-
 def parse_file():
     branch_offices_lines = []
     coordinates_lines = []
@@ -172,5 +171,57 @@ def find_next(first, second, offices, total):
             offices.remove((element[0], element[1]))
             return element, offices
 
+####### Entrega 2 ########
+def main2():
+    parse_file()
+    calculate_distances()
+    #best_result, best_cost = generate_multiple_solutions2()
+    #print("Total cost: ", best_cost)
+    #save_result(best_result)
 
-main()
+
+def calculate_distances():
+    best_cost = 100000
+    best_result = []
+    for i in range(0, data["dimension"]):
+        if branch_offices[str(i+1)] > 0:
+            offices_visited = []
+            aux_branch_offices = branch_offices.copy()
+            offices = list(aux_branch_offices.items())
+            initial_office = offices[i]
+            money = initial_office[1]
+            total_cost = money
+            offices.remove(initial_office)
+            offices_visited.append(initial_office[0])
+            next_office, money, total_cost = select_next_office(initial_office, money, total_cost, offices, offices_visited)
+
+            while offices:
+                next_office, money, total_cost = select_next_office(next_office, money, total_cost, offices, offices_visited)
+
+            total_cost += distance_between(coordinates[initial_office[0]], coordinates[next_office[0]])
+
+            if total_cost < best_cost:
+                best_result = offices_visited.copy()
+                best_cost = total_cost
+
+    print("Total cost: ", best_cost)
+    print("best result", len(best_result))
+
+
+def select_next_office(initial_office, money, total_cost, offices, offices_visited):
+    distances = []
+    for office in offices:
+        if 0 <= money + office[1] <= data["capacity"]:
+            distances.append((office[0], distance_between(coordinates[initial_office[0]], coordinates[office[0]])))
+
+    distances = sorted(distances, key=lambda x: x[1])
+    candidate = distances[0]
+    total_cost += candidate[1]
+    next_office = (candidate[0], branch_offices[candidate[0]])
+    money += next_office[1]
+    offices.remove(next_office)
+    offices_visited.append(next_office[0])
+    return next_office, money, total_cost
+
+
+main2()
