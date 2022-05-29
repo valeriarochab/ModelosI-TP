@@ -201,7 +201,6 @@ def calculate_distances():
 
         while offices:
             next_office, money, total_cost = select_next_office(next_office, money, total_cost, offices, offices_visited)
-            print(len(offices))
             if total_cost > best_cost:
                 break
 

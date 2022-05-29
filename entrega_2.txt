@@ -26,3 +26,4 @@ Para encontrar la mejor solución se podría aplicar el algoritmo de selección 
 de las sucursales. Pero el tiempo total de probar todas las combinaciones representaría días. Por lo tanto se prueba
 tomar 20 sucursales para utilizar como origen, pero esta vez comparando contra el mejor costo obtenido hasta el momento.
 Si el costo total es mayor a este no se continúa el procesamiento, haciendo que el tiempo de cómputo sea menor.
+El resultado obtiene una mejora. El nuevo costo es:  921762.76
