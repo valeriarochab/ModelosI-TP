@@ -8,9 +8,21 @@ cuando la sucursal candidata cumpla con las condiciones de dinero necesarias. De
 de menor distancia a la sucursal actual y a partir de ella se repite el proceso. A medida que se avanza a otra sucursal,
 se elimina la sucursal visitada de la lista de sucursales. De esta forma al calcular las distancias a un punto siempre
 se va a hacer sobre una lista de menor longitud que la inicial. Haciendo que el tiempo de procesamiento sea manejable.
+Dicho algoritmo en el resto del informe será llamado como "selección de siguiente sucursal".
 
 28/05/22 Se aplica el algoritmo y el resultado obtenido es Total cost:  939754.39
 
 Otro algoritmo que se intenta probar es calcular las distancias desde cada sucursal a todas las demás, para luego ordenar
 por buckets por distancia cercana. Pero dada la cantidad de elementos a computar, el cálculo de todas las distancia se
 vuelve inmanejable por lo que se descarta el algoritmo.
+
+Por último se prueba el siguiente algoritmo: se ordenan las sucursales de acuerdo a las que entregan dinero, de la que
+menos dinero entrega a la que más entrega. Además se descartan las sucursales con monto negativo.
+De la lista ordenada se toman las 10 primeras ciudades (para que el tiempo de cómputo sea manejable) y a partir de ellas
+se procede a aplicar el algoritmo de selección de siguiente sucursal.
+Se obtiene como resultado 932326.49, mejorando el costo obtenido anteriormente.
+
+Para encontrar la mejor solución se podría aplicar el algoritmo de selección de siguiente sucursal partiendo de cada una
+de las sucursales. Pero el tiempo total de probar todas las combinaciones representaría días. Por lo tanto se prueba
+tomar 20 sucursales para utilizar como origen, pero esta vez comparando contra el mejor costo obtenido hasta el momento.
+Si el costo total es mayor a este no se continúa el procesamiento, haciendo que el tiempo de cómputo sea menor.

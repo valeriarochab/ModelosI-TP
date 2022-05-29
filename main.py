@@ -95,7 +95,7 @@ def custom_algorithm(n):
 
 
 def save_result(list):
-    file = open("result3.txt", "w")
+    file = open("result4.txt", "w")
     for x in list:
         file.write("{} ".format(x))
     file.close()
@@ -182,17 +182,17 @@ def main2():
 
 def calculate_distances():
     aux_branch_offices = branch_offices.copy()
-    offices2 = list(aux_branch_offices.items())
-    offices2 = sorted(offices2, key=lambda x: x[1])
-    offices2 = list(filter(lambda x: x[1] > 0, offices2))[:10]
+    candidates_offices = list(aux_branch_offices.items())
+    candidates_offices = sorted(candidates_offices, key=lambda x: x[1])
+    candidates_offices = list(filter(lambda x: x[1] > 0, candidates_offices))[:20]
 
-    best_cost = math.inf
+    best_cost = 932326.4928199418
     best_result = []
-    for i in range(0, len(offices2)):
+    for i in range(0, len(candidates_offices)):
         offices_visited = []
         aux_branch_offices = branch_offices.copy()
         offices = list(aux_branch_offices.items())
-        initial_office = offices2[i]
+        initial_office = candidates_offices[i]
         money = initial_office[1]
         total_cost = money
         offices.remove(initial_office)
