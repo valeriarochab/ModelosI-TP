@@ -1,4 +1,9 @@
 Resolución:
+Impresion inicial del problema: al ser una cantidad considerable de puntos a visitar se debe tener en cuenta la complejidad
+del algoritmo para que el mismo pueda procesarse en un tiempo manejable. El algoritmo utilizado para la primera entrega
+calcula n veces las distancias de una sucursal a todas las demás, por lo que se estima que no será aplicable en la
+resolución de la entrega 2.
+
 14/05/22 Se prueba resolver el problema con las 18512 sucursales aplicando el algoritmo de la primera entrega. Pero tras
 siete horas de ejecución no se logran terminar de procesar, dada la cantidad de iteraciones que se realizan.
 
@@ -27,3 +32,6 @@ de las sucursales. Pero el tiempo total de probar todas las combinaciones repres
 tomar 20 sucursales para utilizar como origen, pero esta vez comparando contra el mejor costo obtenido hasta el momento.
 Si el costo total es mayor a este no se continúa el procesamiento, haciendo que el tiempo de cómputo sea menor.
 El resultado obtiene una mejora. El nuevo costo es:  921762.76
+
+Modelo matemático:
+El mismo se detalla en el archivo modelo_matematico_Rocha.pdf
