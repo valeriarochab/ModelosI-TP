@@ -1,0 +1,300 @@
+Iteration 1 with 0 subtours.
+Found subtour of size : 31
+Found subtour of size : 18
+Found subtour of size : 12
+Found subtour of size : 13
+Found subtour of size : 3
+Found subtour of size : 4
+Found subtour of size : 3
+Found subtour of size : 3
+Found subtour of size : 3
+Found subtour of size : 4
+Found subtour of size : 3
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5011.177127442
+Iteration 2 with 1 subtours.
+Found subtour of size : 31
+Found subtour of size : 21
+Found subtour of size : 12
+Found subtour of size : 13
+Found subtour of size : 4
+Found subtour of size : 3
+Found subtour of size : 3
+Found subtour of size : 3
+Found subtour of size : 4
+Found subtour of size : 3
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5023.93283502
+Iteration 3 with 2 subtours.
+Found subtour of size : 69
+Found subtour of size : 9
+Found subtour of size : 3
+Found subtour of size : 5
+Found subtour of size : 4
+Found subtour of size : 4
+Found subtour of size : 3
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5034.22264751
+Iteration 4 with 3 subtours.
+Found subtour of size : 67
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 4
+Found subtour of size : 4
+Found subtour of size : 5
+Found subtour of size : 3
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5050.592530041
+Iteration 5 with 4 subtours.
+Found subtour of size : 67
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 4
+Found subtour of size : 4
+Found subtour of size : 5
+Found subtour of size : 3
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5161.139770336
+Iteration 6 with 5 subtours.
+Found subtour of size : 67
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 7
+Found subtour of size : 4
+Found subtour of size : 5
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5190.081429243
+Iteration 7 with 6 subtours.
+Found subtour of size : 67
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 4
+Found subtour of size : 4
+Found subtour of size : 5
+Found subtour of size : 6
+Best subtour of size 4
+Current solution : 5192.73289052
+Iteration 8 with 7 subtours.
+Found subtour of size : 67
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 4
+Found subtour of size : 4
+Found subtour of size : 5
+Found subtour of size : 6
+Best subtour of size 4
+Current solution : 5192.780174051
+Iteration 9 with 8 subtours.
+Found subtour of size : 31
+Found subtour of size : 42
+Found subtour of size : 12
+Found subtour of size : 9
+Found subtour of size : 3
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5195.539699052
+Iteration 10 with 9 subtours.
+Found subtour of size : 71
+Found subtour of size : 3
+Found subtour of size : 12
+Found subtour of size : 9
+Found subtour of size : 5
+Best subtour of size 3
+Current solution : 5197.684793213
+Iteration 11 with 10 subtours.
+Found subtour of size : 14
+Found subtour of size : 42
+Found subtour of size : 12
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 7
+Found subtour of size : 4
+Found subtour of size : 4
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5198.197370323
+Iteration 12 with 11 subtours.
+Found subtour of size : 67
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 10
+Found subtour of size : 4
+Found subtour of size : 5
+Best subtour of size 4
+Current solution : 5202.446737829
+Iteration 13 with 12 subtours.
+Found subtour of size : 71
+Found subtour of size : 8
+Found subtour of size : 12
+Found subtour of size : 9
+Best subtour of size 8
+Current solution : 5202.652051987
+Iteration 14 with 13 subtours.
+Found subtour of size : 67
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 10
+Found subtour of size : 4
+Found subtour of size : 5
+Best subtour of size 4
+Current solution : 5208.61061726
+Iteration 15 with 14 subtours.
+Found subtour of size : 71
+Found subtour of size : 8
+Found subtour of size : 12
+Found subtour of size : 9
+Best subtour of size 8
+Current solution : 5209.198273727
+Iteration 16 with 15 subtours.
+Found subtour of size : 76
+Found subtour of size : 12
+Found subtour of size : 9
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5212.564032609
+Iteration 17 with 16 subtours.
+Found subtour of size : 70
+Found subtour of size : 9
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 3
+Found subtour of size : 4
+Best subtour of size 3
+Current solution : 5213.878741275
+Iteration 18 with 17 subtours.
+Found subtour of size : 14
+Found subtour of size : 45
+Found subtour of size : 12
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 7
+Found subtour of size : 4
+Found subtour of size : 4
+Best subtour of size 4
+Current solution : 5216.498355697
+Iteration 19 with 18 subtours.
+Found subtour of size : 73
+Found subtour of size : 9
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 4
+Best subtour of size 4
+Current solution : 5217.21078849
+Iteration 20 with 19 subtours.
+Found subtour of size : 74
+Found subtour of size : 9
+Found subtour of size : 9
+Found subtour of size : 5
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5217.681455735
+Iteration 21 with 20 subtours.
+Found subtour of size : 72
+Found subtour of size : 7
+Found subtour of size : 12
+Found subtour of size : 9
+Best subtour of size 7
+Current solution : 5221.35392734
+Iteration 22 with 21 subtours.
+Found subtour of size : 71
+Found subtour of size : 5
+Found subtour of size : 12
+Found subtour of size : 9
+Found subtour of size : 3
+Best subtour of size 3
+Current solution : 5221.953981305
+Iteration 23 with 22 subtours.
+Found subtour of size : 71
+Found subtour of size : 8
+Found subtour of size : 12
+Found subtour of size : 9
+Best subtour of size 8
+Current solution : 5223.584282223
+Iteration 24 with 23 subtours.
+Found subtour of size : 30
+Found subtour of size : 45
+Found subtour of size : 12
+Found subtour of size : 9
+Found subtour of size : 4
+Best subtour of size 4
+Current solution : 5224.907080824
+Iteration 25 with 24 subtours.
+Found subtour of size : 71
+Found subtour of size : 8
+Found subtour of size : 12
+Found subtour of size : 9
+Best subtour of size 8
+Current solution : 5225.090290516
+Iteration 26 with 25 subtours.
+Found subtour of size : 79
+Found subtour of size : 12
+Found subtour of size : 9
+Best subtour of size 9
+Current solution : 5226.011587079
+Iteration 27 with 26 subtours.
+Found subtour of size : 72
+Found subtour of size : 8
+Found subtour of size : 5
+Found subtour of size : 10
+Found subtour of size : 5
+Best subtour of size 5
+Current solution : 5234.237851381
+Iteration 28 with 27 subtours.
+Found subtour of size : 72
+Found subtour of size : 8
+Found subtour of size : 5
+Found subtour of size : 10
+Found subtour of size : 5
+Best subtour of size 5
+Current solution : 5235.630828013
+Iteration 29 with 28 subtours.
+Found subtour of size : 72
+Found subtour of size : 8
+Found subtour of size : 5
+Found subtour of size : 10
+Found subtour of size : 5
+Best subtour of size 5
+Current solution : 5239.375806906
+Iteration 30 with 29 subtours.
+Found subtour of size : 72
+Found subtour of size : 8
+Found subtour of size : 5
+Found subtour of size : 10
+Found subtour of size : 5
+Best subtour of size 5
+Current solution : 5239.593250283
+Iteration 31 with 30 subtours.
+Found subtour of size : 72
+Found subtour of size : 28
+Best subtour of size 28
+Current solution : 5243.082529443
+Iteration 32 with 31 subtours.
+Found subtour of size : 88
+Found subtour of size : 12
+Best subtour of size 12
+Current solution : 5244.679472446
+Iteration 33 with 32 subtours.
+Found subtour of size : 72
+Found subtour of size : 28
+Best subtour of size 28
+Current solution : 5245.618258589
+Iteration 34 with 33 subtours.
+Found subtour of size : 88
+Found subtour of size : 7
+Found subtour of size : 5
+Best subtour of size 5
+Current solution : 5247.570598033
+Iteration 35 with 34 subtours.
+Found subtour of size : 72
+Found subtour of size : 28
+Best subtour of size 28
+Current solution : 5249.216670181
+Iteration 36 with 35 subtours.
+Found subtour of size : 100
+Current solution : 5249.622889689
