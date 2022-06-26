@@ -86,7 +86,7 @@ def custom_algorithm(n):
 
 
 def save_result(list):
-    file = open("result5.txt", "w")
+    file = open("final_result.txt", "w")
     for x in list:
         file.write("{} ".format(x))
     file.close()
@@ -173,7 +173,6 @@ def main3():
 
 def calculate_distances():
     candidates_offices = list(range(1, 101))
-    print(candidates_offices)
 
     best_cost = 932326.4928199418
     best_result = []
