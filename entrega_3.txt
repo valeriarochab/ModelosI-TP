@@ -1,0 +1,2 @@
+Ver informe-tp3.pdf
+En la carpeta cplex-tp3 se encuentran los resultados de las corridas en Cplex.
