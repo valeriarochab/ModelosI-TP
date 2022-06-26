@@ -8,10 +8,9 @@ coordinates = {}
 
 
 def parse_file():
-    branch_offices_lines = []
     coordinates_lines = []
     current_path = os.path.dirname(os.path.abspath(__file__))
-    with open("{}/problema_dos.txt".format(current_path)) as fp:
+    with open("{}/problema_tres.txt".format(current_path)) as fp:
         lines = [line for line in fp]
 
         for line in lines:
@@ -22,18 +21,10 @@ def parse_file():
                 data["dimension"] = int(elements[1])
             elif elements[0] == 'DEMANDAS':
                 n = data["dimension"]
-                branch_offices_lines = lines[3:3 + n]
-                coordinates_lines = lines[6 + n:6 + 2 * n]
+                coordinates_lines = lines[6:6 + n]
                 break
 
-    parse_branch_offices(branch_offices_lines)
     parse_coordinates(coordinates_lines)
-
-
-def parse_branch_offices(branch_offices_lines):
-    for office in branch_offices_lines:
-        elements = office.split()
-        branch_offices[elements[0]] = int(elements[1])
 
 
 def parse_coordinates(coordinates_lines):
@@ -95,7 +86,7 @@ def custom_algorithm(n):
 
 
 def save_result(list):
-    file = open("result4.txt", "w")
+    file = open("result5.txt", "w")
     for x in list:
         file.write("{} ".format(x))
     file.close()
@@ -173,38 +164,34 @@ def find_next(first, second, offices, total):
             return element, offices
 
 
-####### Entrega 2 ########
-def main2():
+####### Entrega 3 ########
+def main3():
     parse_file()
     result = calculate_distances()
     save_result(result)
 
 
 def calculate_distances():
-    aux_branch_offices = branch_offices.copy()
-    candidates_offices = list(aux_branch_offices.items())
-    candidates_offices = sorted(candidates_offices, key=lambda x: x[1])
-    candidates_offices = list(filter(lambda x: x[1] > 0, candidates_offices))[:20]
+    candidates_offices = list(range(1, 101))
+    print(candidates_offices)
 
     best_cost = 932326.4928199418
     best_result = []
     for i in range(0, len(candidates_offices)):
         offices_visited = []
-        aux_branch_offices = branch_offices.copy()
-        offices = list(aux_branch_offices.items())
+        offices = candidates_offices.copy()
         initial_office = candidates_offices[i]
-        money = initial_office[1]
-        total_cost = money
+        total_cost = 0
         offices.remove(initial_office)
-        offices_visited.append(initial_office[0])
-        next_office, money, total_cost = select_next_office(initial_office, money, total_cost, offices, offices_visited)
+        offices_visited.append(initial_office)
+        next_office, total_cost = select_next_office(initial_office, total_cost, offices, offices_visited)
 
         while offices:
-            next_office, money, total_cost = select_next_office(next_office, money, total_cost, offices, offices_visited)
+            next_office, total_cost = select_next_office(next_office, total_cost, offices, offices_visited)
             if total_cost > best_cost:
                 break
 
-        total_cost += distance_between(coordinates[initial_office[0]], coordinates[next_office[0]])
+        total_cost += distance_between(coordinates[str(initial_office)], coordinates[str(next_office)])
 
         if total_cost < best_cost:
             best_result = offices_visited.copy()
@@ -215,20 +202,18 @@ def calculate_distances():
     return best_result
 
 
-def select_next_office(initial_office, money, total_cost, offices, offices_visited):
+def select_next_office(initial_office, total_cost, offices, offices_visited):
     distances = []
     for office in offices:
-        if 0 <= money + office[1] <= data["capacity"]:
-            distances.append((office[0], distance_between(coordinates[initial_office[0]], coordinates[office[0]])))
+        distances.append((office, distance_between(coordinates[str(initial_office)], coordinates[str(office)])))
 
     distances = sorted(distances, key=lambda x: x[1])
     candidate = distances[0]
     total_cost += candidate[1]
-    next_office = (candidate[0], branch_offices[candidate[0]])
-    money += next_office[1]
+    next_office = candidate[0]
     offices.remove(next_office)
-    offices_visited.append(next_office[0])
-    return next_office, money, total_cost
+    offices_visited.append(next_office)
+    return next_office, total_cost
 
 
-main2()
+main3()
